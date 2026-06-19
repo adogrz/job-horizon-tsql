@@ -1,0 +1,9 @@
+CREATE TABLE Genero
+(
+    IdGenero INT         NOT NULL IDENTITY (1,1),
+    Nombre   VARCHAR(30) NOT NULL, -- MASCULINO | FEMENINO | OTRO | PREFIERO_NO_DECIR
+    Activo   BIT         NOT NULL DEFAULT 1,
+    CONSTRAINT PK_Genero PRIMARY KEY (IdGenero),
+    CONSTRAINT UQ_Genero_Nombre UNIQUE (Nombre)
+);
+GO
